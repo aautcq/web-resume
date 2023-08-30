@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Adrien Autricque</title>
+    <script
+      src="https://kit.fontawesome.com/829a3299e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
+
+      :root {
+        --main-bg-color: #0f172a;
+        --content-color: #cbd5e1;
+        --progress-color: #475569;
+        --border-color: #94a3b8;
+        --hobbie-color: #64748b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      body {
+        background: #585c68;
+        font-size: 12px;
+        line-height: 22px;
+        color: #555555;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: opacity 0.3s ease;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+
+      .bold {
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      .semi-bold {
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .resume {
+        max-width: 800px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 50px auto;
+      }
+
+      @media only screen and (max-width: 560px) {
+        .resume {
+          flex-wrap: wrap;
+        }
+      }
+
+      .resume .resume_left {
+        flex: 1 1 auto;
+        min-width: 280px;
+        background: var(--main-bg-color);
+      }
+
+      .resume .resume_left .resume_profile {
+        width: 100%;
+        height: 280px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      .resume .resume_left .resume_profile img {
+        width: 240px;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .resume .resume_left .resume_content {
+        padding: 0 20px;
+      }
+
+      .resume .title {
+        margin-bottom: 15px;
+        line-height: 30px;
+      }
+
+      .resume .resume_left .bold {
+        color: #fff;
+      }
+
+      .resume .resume_left .regular {
+        color: var(--content-color);
+        font-weight: normal;
+        font-size: 12px;
+      }
+
+      .resume .resume_item {
+        padding: 15px 0;
+      }
+
+      .resume .resume_left .resume_item {
+        border-bottom: 2px solid var(--border-color);
+      }
+
+      .resume .resume_right .resume_item {
+        border-bottom: 2px solid var(--border-light-color);
+      }
+
+      .resume .resume_item.resume_about {
+        line-height: 18px;
+      }
+
+      .resume .resume_left .resume_item:last-child,
+      .resume .resume_right .resume_item:last-child {
+        border-bottom: 0px;
+        padding-bottom: 0px;
+      }
+
+      .resume .resume_left .resume_item:first-child,
+      .resume .resume_right .resume_item:first-child {
+        padding-top: 0px;
+      }
+
+      .resume .resume_left ul li {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+
+      .resume .resume_left ul li:last-child {
+        margin-bottom: 0;
+      }
+
+      .resume .resume_left ul li .icon {
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        color: var(--main-bg-color);
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 18px;
+        position: relative;
+        flex: none;
+      }
+
+      .resume .icon i,
+      .resume .resume_right .resume_hobby ul li i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .resume .resume_left ul li .data {
+        color: var(--content-color);
+      }
+
+      .resume .resume_left .resume_skills ul li {
+        display: flex;
+        margin-bottom: 10px;
+        color: var(--content-color);
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .resume .resume_left .resume_skills ul li .skill_name {
+        width: 40%;
+      }
+
+      .resume .resume_left .resume_skills ul li .skill_progress {
+        width: 35%;
+        margin: 0 5px;
+        height: 5px;
+        background: var(--progress-color);
+        position: relative;
+      }
+
+      .resume .resume_left .resume_skills ul li .skill_per {
+        width: 15%;
+      }
+
+      .resume .resume_left .resume_skills ul li .skill_progress span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #fff;
+      }
+
+      .resume .resume_right {
+        max-width: 520px;
+        min-width: 280px;
+        flex: 0 1 auto;
+        background: #fff;
+        padding: 25px;
+      }
+
+      .resume .resume_right .bold {
+        color: var(--main-bg-color);
+      }
+
+      .resume .resume_right .resume_work ul,
+      .resume .resume_right .resume_education ul {
+        padding-left: 20px;
+        overflow: hidden;
+      }
+
+      .resume .resume_right ul li {
+        position: relative;
+      }
+
+      .resume .resume_right ul li .date {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 7px;
+      }
+
+      .resume .resume_right ul li:not(:last-child) .info {
+        margin-bottom: 20px;
+      }
+
+      .resume .resume_right ul li .info .location {
+        font-weight: 300;
+        margin-left: 5px;
+      }
+
+      .resume .resume_right .resume_work ul li:before,
+      .resume .resume_right .resume_education ul li:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: -20px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        border: 2px solid var(--main-bg-color);
+      }
+
+      .resume .resume_right .resume_work ul li:after,
+      .resume .resume_right .resume_education ul li:after {
+        content: '';
+        position: absolute;
+        top: 14px;
+        left: -16px;
+        width: 2px;
+        height: calc(100% + 12px);
+        background: var(--main-bg-color);
+      }
+
+      .resume .resume_right .resume_hobby ul {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+      }
+
+      .resume .resume_right .resume_hobby ul li {
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--hobbie-color);
+        border-radius: 50%;
+        position: relative;
+        color: var(--main-bg-color);
+      }
+
+      .resume .resume_right .resume_hobby ul li i {
+        font-size: 20px;
+      }
+
+      .resume .resume_right .resume_hobby ul li:not(:last-child):before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: calc(-2px - 100%);
+        width: 38px;
+        height: 2px;
+        background: var(--hobbie-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume">
+      <div class="resume_left">
+        <div class="resume_profile">
+          <img
+            src="https://drive.google.com/uc?export=view&id=1cnzvXEEEsz7xZ8oyLGp9cPjlw751rhfN"
+            alt="profile_pic"
+          />
+        </div>
+        <div class="resume_content">
+          <div class="resume_item resume_info">
+            <div class="title">
+              <h1 class="bold">Adrien Autricque</h1>
+              <h4 class="regular">Développeur front-end</h4>
+            </div>
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="fas fa-map-signs"></i>
+                </div>
+                <div class="data">
+                  <a
+                    href="https://www.google.com/maps/place/173+Rue+des+Stations,+59000+Lille"
+                    title="173 rue des Stations, 59 000, Lille"
+                    target="_blank"
+                    >173 rue des Stations, 59 000, Lille</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="data">
+                  <a
+                    href="tel:+33627047868"
+                    title="06 27 04 78 68"
+                    target="_blank"
+                    >06 27 04 78 68</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="data">
+                  <a
+                    href="mailto:adrien.autricque@gmail.com"
+                    title="adrien.autricque@gmail.com"
+                    target="_blank"
+                    >adrien.autricque@gmail.com</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="data">
+                  <a
+                    href="https://www.linkedin.com/in/adrienautricque"
+                    title="linkedin.com/in/adrienautricque"
+                    target="_blank"
+                    >linkedin.com/in/adrienautricque</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="data">
+                  <a
+                    href="https://github.com/aautcq"
+                    title="github.com/aautcq"
+                    target="_blank"
+                    >github.com/aautcq</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="resume_item resume_skills">
+            <div class="title">
+              <h2 class="bold">Compétences</h2>
+            </div>
+            <ul>
+              <li>
+                <div class="skill_name">HTML5</div>
+                <div class="skill_progress">
+                  <span style="width: 100%"></span>
+                </div>
+                <div class="skill_per">100%</div>
+              </li>
+              <li>
+                <div class="skill_name">CSS3, SCSS</div>
+                <div class="skill_progress">
+                  <span style="width: 90%"></span>
+                </div>
+                <div class="skill_per">90%</div>
+              </li>
+              <li>
+                <div class="skill_name">JS, TS</div>
+                <div class="skill_progress">
+                  <span style="width: 90%"></span>
+                </div>
+                <div class="skill_per">90%</div>
+              </li>
+              <li>
+                <div class="skill_name">TailwindCSS</div>
+                <div class="skill_progress">
+                  <span style="width: 100%"></span>
+                </div>
+                <div class="skill_per">100%</div>
+              </li>
+              <li>
+                <div class="skill_name">Vite, Webpack</div>
+                <div class="skill_progress">
+                  <span style="width: 90%"></span>
+                </div>
+                <div class="skill_per">90%</div>
+              </li>
+              <li>
+                <div class="skill_name">VueJS, Angular</div>
+                <div class="skill_progress">
+                  <span style="width: 90%"></span>
+                </div>
+                <div class="skill_per">90%</div>
+              </li>
+              <li>
+                <div class="skill_name">Python</div>
+                <div class="skill_progress">
+                  <span style="width: 70%"></span>
+                </div>
+                <div class="skill_per">70%</div>
+              </li>
+              <li>
+                <div class="skill_name">Bash</div>
+                <div class="skill_progress">
+                  <span style="width: 70%"></span>
+                </div>
+                <div class="skill_per">70%</div>
+              </li>
+              <li>
+                <div class="skill_name">Git, GitHub</div>
+                <div class="skill_progress">
+                  <span style="width: 90%"></span>
+                </div>
+                <div class="skill_per">90%</div>
+              </li>
+            </ul>
+          </div>
+          <div class="resume_item resume_skills">
+            <div class="title">
+              <h2 class="bold">Langues étrangères</h2>
+            </div>
+            <ul>
+              <li>
+                <div class="skill_name">Anglais</div>
+                <div class="skill_progress">
+                  <span style="width: 100%"></span>
+                </div>
+                <div class="skill_per">100%</div>
+              </li>
+              <li>
+                <div class="skill_name">Espagnol</div>
+                <div class="skill_progress">
+                  <span style="width: 50%"></span>
+                </div>
+                <div class="skill_per">50%</div>
+              </li>
+              <li>
+                <div class="skill_name">Chinois</div>
+                <div class="skill_progress">
+                  <span style="width: 20%"></span>
+                </div>
+                <div class="skill_per">20%</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="resume_right">
+        <div class="resume_item resume_about">
+          <div class="title">
+            <h2 class="bold">À propos</h2>
+          </div>
+          <p>
+            Je suis un développeur front-end passionné par le web et spécialisé
+            dans les frameworks modernes. J'ai créé des applis SaaS avec Vue.js,
+            Angular et Ruby on Rails, tout en ayant une solide formation en
+            ingénierie. Ma créativité se reflète dans mon engagement associatif
+            et mes loisirs sportifs et artistiques. Mon parcours académique et
+            mon expérience en programmation et modélisation font de moi un
+            développeur polyvalent et enthousiaste.
+          </p>
+        </div>
+        <div class="resume_item resume_work">
+          <div class="title">
+            <h2 class="bold">Expériences professionnelles</h2>
+          </div>
+          <ul>
+            <li>
+              <div class="date">2020 - présent</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Développeur front-end
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://www.talentview.fr"
+                      title="TalentView"
+                      target="_blank"
+                      >TalentView</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  Développement web (SPA) d'applications SaaS d'assistance au
+                  recrutement
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2019 - 2020</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Ingénieur études et développement
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a href="https://adaming.fr" title="Adaming" target="_blank"
+                      >Adaming</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  Développement sur l'application d'encaissement des magasins
+                  Leroy Merlin et Bricoman
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2015 - 2018</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Thèse de doctorat
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://cadarache.cea.fr"
+                      title="CEA Cadarache"
+                      target="_blank"
+                      >CEA</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  Modélisation physique de plasmas dans les machines de fusion
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2013 - 2015</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Stages ingénieur
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://cadarache.cea.fr"
+                      title="CEA Cadarache"
+                      target="_blank"
+                      >CEA</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  Analyse de données et traitement d'images issues de machines
+                  de fusion
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="resume_item resume_education">
+          <div class="title">
+            <h2 class="bold">Formation</h2>
+          </div>
+          <ul>
+            <li>
+              <div class="date">2019 - 2020</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Formation JS/Java/Big data
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://www.intiformation.com"
+                      title="INTI Formation"
+                      target="_blank"
+                      >INTI Formation</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  3 mois de formation sur les technologies modernes du
+                  développement web
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2011 - 2015</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Diplôme d'ingénieur
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://www.ec-lyon.fr"
+                      title="Centrale Lyon"
+                      target="_blank"
+                      >Centrale Lyon</a
+                    ></span
+                  >
+                </h3>
+                <p>Ingénieur généraliste</p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2014 - 2015</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Master 2 de physique
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://www.univ-lyon1.fr"
+                      title="Université Claude Bernard Lyon 1"
+                      target="_blank"
+                      >Lyon 1</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  Synthèse, caractérisation et vieillissement des matériaux du
+                  nucléaire
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2009 - 2011</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Classes préparatoires aux grandes écoles
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://www.faidherbe.org"
+                      title="Lycée Faidherbe"
+                      target="_blank"
+                      >Lycée Faidherbe</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  Mathématiques, physique et sciences de l'ingénieur - Classe
+                  étoilée
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2006 - 2009</div>
+              <div class="info">
+                <h3 class="semi-bold">
+                  Baccalauréat scientifique
+                  <span class="location"
+                    ><i class="fas fa-xs fa-map-marker-alt"></i>
+                    <a
+                      href="https://www.lycee-saint-cricq.org"
+                      title="Lycée Saint-Cricq"
+                      target="_blank"
+                      >Lycée St Cricq</a
+                    ></span
+                  >
+                </h3>
+                <p>
+                  Option sciences de l'ingénieur - Spécialité mathématiques -
+                  Mention TB
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="resume_item resume_hobby">
+          <div class="title">
+            <h2 class="bold">Hobbies</h2>
+          </div>
+          <ul>
+            <li title="Musique"><i class="fas fa-music"></i></li>
+            <li title="Lecture"><i class="fas fa-book"></i></li>
+            <li title="Voyages"><i class="fas fa-hiking"></i></li>
+            <li title="Photographie"><i class="fas fa-camera-retro"></i></li>
+            <li title="Sport"><i class="fas fa-dumbbell"></i></li>
+            <li title="Nature"><i class="fab fa-pagelines"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
