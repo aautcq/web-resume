@@ -66,6 +66,7 @@
       @media only screen and (max-width: 560px) {
         .resume {
           flex-wrap: wrap;
+          margin: 0 auto;
         }
       }
 
@@ -126,7 +127,10 @@
         line-height: 18px;
       }
 
-      .resume .resume_left .resume_item:last-child,
+      .resume .resume_left .resume_item:last-child {
+        border-bottom: 0px;
+      }
+
       .resume .resume_right .resume_item:last-child {
         border-bottom: 0px;
         padding-bottom: 0px;
@@ -265,11 +269,19 @@
 
       .resume .resume_right .resume_hobby ul {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 35px;
       }
 
+      @media only screen and (max-width: 560px) {
+        .resume .resume_right .resume_hobby ul {
+          gap: 20px;
+        }
+      }
+
       .resume .resume_right .resume_hobby ul li {
+        flex: none;
         width: 40px;
         height: 40px;
         border: 2px solid var(--hobbie-color);
@@ -290,6 +302,13 @@
         width: 38px;
         height: 2px;
         background: var(--hobbie-color);
+      }
+
+      @media only screen and (max-width: 560px) {
+        .resume .resume_right .resume_hobby ul li:not(:last-child):before {
+          right: calc(13px - 100%);
+          width: 22px;
+        }
       }
     </style>
   </head>
