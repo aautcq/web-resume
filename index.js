@@ -20,13 +20,12 @@ const fs = require('fs');
   await page.evaluateHandle('document.fonts.ready');
 
   // Get page dimensions
-  const elem = await page.$('.resume');
+  const elem = await page.$('body');
   const { height, width } = await elem.boundingBox();
 
   // Get page title
   const title = await page.title();
   const formattedTitle = title.replace(/\s/g, '-').toLowerCase() + '.pdf';
-  console.log(formattedTitle);
 
   // Downlaod the PDF
   await page.pdf({
