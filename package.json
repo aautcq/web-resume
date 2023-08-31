@@ -1,0 +1,29 @@
+{
+  "name": "web-resume",
+  "version": "1.0.0",
+  "description": "Web resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf CV-adrien-autricque-fr.pdf && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aautcq/web-resume.git"
+  },
+  "keywords": [
+    "CV",
+    "Resume"
+  ],
+  "author": "Adrien Autricque <adrien.autricque@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aautcq/web-resume/issues"
+  },
+  "homepage": "https://github.com/aautcq/web-resume#readme",
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "puppeteer": "^21.1.1",
+    "rimraf": "^5.0.1"
+  }
+}
