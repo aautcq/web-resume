@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
+const RESUME_HEIGHT = 1331;
+
 (async () => {
   // Create a browser instance
   const browser = await puppeteer.launch({ headless: 'new' });
@@ -19,7 +21,7 @@ const fs = require('fs');
   await page.pdf({
     path: 'CV-adrien-autricque-fr.pdf',
     width: 800,
-    height: 1331,
+    height: RESUME_HEIGHT,
     printBackground: true
   });
 
