@@ -33,5 +33,5 @@ const fs = require('fs');
 
   await browser.close();
 
-  console.log(`PDF generated: ${formattedTitle}`)
+  console.log(`PDF generated: ${formattedTitle}`);
 })();
