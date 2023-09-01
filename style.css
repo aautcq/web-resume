@@ -260,9 +260,12 @@ a:hover {
   margin-bottom: 7px;
 }
 
+.resume .resume_right ul li .info {
+  line-height: 19px;
+}
+
 .resume .resume_right ul li:not(:last-child) .info {
   margin-bottom: 20px;
-  line-height: 18px;
 }
 
 .resume .resume_right ul li .info .location {
