@@ -1,9 +1,35 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const sharp = require('sharp');
+const exec = require('@actions/exec');
 
 (async () => {
   const browser = await puppeteer.launch({ headless: 'new' });
   const page = await browser.newPage();
+
+  await page.setRequestInterception(true);
+
+  // convert images to JPEG
+  page.on('request', async (req) => {
+    if (req.resourceType() !== 'image') {
+      req.continue();
+      return;
+    }
+    try {
+      const response = await fetch(req.url(), {
+        method: req.method(),
+        headers: req.headers(),
+      });
+      const buffer = await response.arrayBuffer();
+      const jpeg = await sharp(buffer)
+        .jpeg({ mozjpeg: true })
+        .rotate()
+        .toBuffer();
+      req.respond({ body: jpeg });
+    } catch {
+      req.continue();
+    }
+  });
 
   // set page content (HTML and CSS)
   const html = fs.readFileSync('index.html', 'utf-8');
@@ -22,10 +48,12 @@ const fs = require('fs');
 
   // get page title
   const title = await page.title();
-  const formattedTitle = title.replace(/\s/g, '-').toLowerCase() + '.pdf';
+  const fileTitle = title.replace(/\s/g, '-').toLowerCase();
+  const tmpFileTitle = fileTitle + '.tmp.pdf';
+  const finalFileTitle = fileTitle + '.pdf';
 
   await page.pdf({
-    path: formattedTitle,
+    path: tmpFileTitle,
     width,
     height,
     printBackground: true
@@ -33,5 +61,11 @@ const fs = require('fs');
 
   await browser.close();
 
-  console.log(`PDF generated: ${formattedTitle}`);
+  // shrink PDF
+  await exec.exec(`./shrinkpdf.sh -r 300 -o ${finalFileTitle} ${tmpFileTitle}`);
+
+  // remove temporary file
+  await exec.exec(`rm ${tmpFileTitle}`);
+
+  console.log(`PDF generated: ${finalFileTitle}`);
 })();

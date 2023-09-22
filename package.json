@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/aautcq/web-resume#readme",
   "devDependencies": {
+    "@actions/exec": "^1.1.1",
     "puppeteer": "^21.1.1",
     "rimraf": "^5.0.1"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6"
   }
 }
