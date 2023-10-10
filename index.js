@@ -9,7 +9,7 @@ const exec = require('@actions/exec');
 
   await page.setRequestInterception(true);
 
-  // convert images to JPEG
+  // convert images to WEBP
   page.on('request', async (req) => {
     if (req.resourceType() !== 'image') {
       req.continue();
@@ -21,11 +21,11 @@ const exec = require('@actions/exec');
         headers: req.headers(),
       });
       const buffer = await response.arrayBuffer();
-      const jpeg = await sharp(buffer)
-        .jpeg({ mozjpeg: true })
+      const image = await sharp(buffer)
+        .webp({ quality: 100, lossless: true })
         .rotate()
         .toBuffer();
-      req.respond({ body: jpeg });
+      req.respond({ body: image });
     } catch {
       req.continue();
     }
