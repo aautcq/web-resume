@@ -19,6 +19,10 @@
       src="https://kit.fontawesome.com/829a3299e8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="components/infoItem.js"></script>
+    <script src="components/resumeItem.js"></script>
+    <script src="components/resumeAchievementItem.js"></script>
+    <script src="components/skillProgress.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
@@ -38,90 +42,64 @@
               <!-- <h5 class="regular--sm">Disponible sous 3 mois</h5> -->
             </div>
             <ul>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-birthday-cake"></i>
-                </div>
-                <div class="data">32 ans</div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-map-signs"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="https://www.google.com/maps/place/173+Rue+des+Stations,+59000+Lille"
-                    title="173 rue des Stations, 59 000, Lille"
-                    target="_blank"
-                    >173 rue des Stations, 59 000, Lille</a
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="tel:+33627047868"
-                    title="06 27 04 78 68"
-                    target="_blank"
-                    >06 27 04 78 68</a
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="mailto:adrien.autricque@gmail.com"
-                    title="adrien.autricque@gmail.com"
-                    target="_blank"
-                    >adrien.autricque@gmail.com</a
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fab fa-linkedin"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="https://www.linkedin.com/in/adrienautricque"
-                    title="linkedin.com/in/adrienautricque"
-                    target="_blank"
-                    >linkedin.com/in/adrienautricque</a
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fab fa-github"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="https://github.com/aautcq"
-                    title="github.com/aautcq"
-                    target="_blank"
-                    >github.com/aautcq</a
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-link"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="https://aautcq.com"
-                    title="aautcq.com"
-                    target="_blank"
-                    >aautcq.com</a
-                  >
-                </div>
-              </li>
+              <info-item>
+                <i slot="icon" class="fas fa-birthday-cake"></i>
+                32 ans
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fas fa-map-signs"></i>
+                <a
+                  href="https://www.google.com/maps/place/173+Rue+des+Stations,+59000+Lille"
+                  title="173 rue des Stations, 59 000, Lille"
+                  target="_blank"
+                  >173 rue des Stations, 59 000, Lille</a
+                >
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fas fa-mobile-alt"></i>
+                <a
+                  href="tel:+33627047868"
+                  title="06 27 04 78 68"
+                  target="_blank"
+                  >06 27 04 78 68</a
+                >
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fas fa-envelope"></i>
+                <a
+                  href="mailto:adrien.autricque@gmail.com"
+                  title="adrien.autricque@gmail.com"
+                  target="_blank"
+                  >adrien.autricque@gmail.com</a
+                >
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fab fa-linkedin"></i>
+                <a
+                  href="https://www.linkedin.com/in/adrienautricque"
+                  title="linkedin.com/in/adrienautricque"
+                  target="_blank"
+                  >linkedin.com/in/adrienautricque</a
+                >
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fab fa-github"></i>
+                <a
+                  href="https://github.com/aautcq"
+                  title="github.com/aautcq"
+                  target="_blank"
+                  >github.com/aautcq</a
+                >
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fas fa-link"></i>
+                <a
+                  href="https://aautcq.com"
+                  title="aautcq.com"
+                  target="_blank"
+                  >aautcq.com</a
+                >
+              </info-item>
             </ul>
           </div>
           <div class="resume_item resume_skills">
@@ -129,83 +107,17 @@
               <h2 class="bold">Compétences</h2>
             </div>
             <ul>
-              <li>
-                <div class="skill_name">HTML5</div>
-                <div class="skill_progress">
-                  <span style="width: 100%"></span>
-                </div>
-                <div class="skill_per">100%</div>
-              </li>
-              <li>
-                <div class="skill_name">CSS3, SCSS</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
-              <li>
-                <div class="skill_name">JS, TS</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
-              <li>
-                <div class="skill_name">TailwindCSS</div>
-                <div class="skill_progress">
-                  <span style="width: 100%"></span>
-                </div>
-                <div class="skill_per">100%</div>
-              </li>
-              <li>
-                <div class="skill_name">Vite, Webpack</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
-              <li>
-                <div class="skill_name">VueJS, Angular</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
-              <li>
-                <div class="skill_name">Python</div>
-                <div class="skill_progress">
-                  <span style="width: 70%"></span>
-                </div>
-                <div class="skill_per">70%</div>
-              </li>
-              <li>
-                <div class="skill_name">Bash</div>
-                <div class="skill_progress">
-                  <span style="width: 70%"></span>
-                </div>
-                <div class="skill_per">70%</div>
-              </li>
-              <li>
-                <div class="skill_name">Git, GitHub</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
-              <li>
-                <div class="skill_name">Notion</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
-              <li>
-                <div class="skill_name">Figma</div>
-                <div class="skill_progress">
-                  <span style="width: 70%"></span>
-                </div>
-                <div class="skill_per">70%</div>
-              </li>
+              <skill-progress value="100">HTML5</skill-progress>
+              <skill-progress value="90">CSS3, SCSS</skill-progress>
+              <skill-progress value="90">JS, TS</skill-progress>
+              <skill-progress value="100">TailwindCSS</skill-progress>
+              <skill-progress value="90">Vite, Webpack</skill-progress>
+              <skill-progress value="90">VueJS, Angular</skill-progress>
+              <skill-progress value="70">Python</skill-progress>
+              <skill-progress value="70">Bash</skill-progress>
+              <skill-progress value="90">Git, GitHub</skill-progress>
+              <skill-progress value="90">Notion</skill-progress>
+              <skill-progress value="70">Figma</skill-progress>
             </ul>
           </div>
           <div class="resume_item resume_skills">
@@ -213,20 +125,8 @@
               <h2 class="bold">Langues étrangères</h2>
             </div>
             <ul>
-              <li>
-                <div class="skill_name">Anglais</div>
-                <div class="skill_progress">
-                  <span style="width: 100%"></span>
-                </div>
-                <div class="skill_per">100%</div>
-              </li>
-              <li>
-                <div class="skill_name">Espagnol</div>
-                <div class="skill_progress">
-                  <span style="width: 50%"></span>
-                </div>
-                <div class="skill_per">50%</div>
-              </li>
+              <skill-progress value="100">Anglais</skill-progress>
+              <skill-progress value="50">Espagnol</skill-progress>
             </ul>
           </div>
         </div>
@@ -251,134 +151,96 @@
             <h2 class="bold">Expériences professionnelles</h2>
           </div>
           <ul>
-            <li>
-              <div class="date">2024 - présent</div>
-              <div class="info">
-                <div class="resume_item_title">
-                  <h3 class="semi-bold">Senior developer front-end</h3>
-                  <span class="location">
-                    <a
-                      href="https://www.exotec.com"
-                      title="Exotec"
-                      target="_blank"
-                      >[Exotec]</a
-                    ></span
-                  >
-                </div>
-                <ul>
-                  <li>
-                    Conception, développement et maintenance d'applications web
-                    intégrées dans les systèmes robotiques de gestion
-                    d'entrepôts de stockage
-                  </li>
-                  <li>
-                    Fonctionnement en méthode agile. Collaboration avec d'autres
-                    équipes (back-end, produit, UX/UI)
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="date">2020 - 2023</div>
-              <div class="info">
-                <div class="resume_item_title">
-                  <h3 class="semi-bold">Lead developer front-end</h3>
-                  <span class="location">
-                    <a
-                      href="https://www.talentview.fr"
-                      title="TalentView"
-                      target="_blank"
-                      >[TalentView]</a
-                    ></span
-                  >
-                </div>
-                <ul>
-                  <li>
-                    Conception, développement et maintenance de l'<a
-                      href="https://www.youtube.com/watch?v=_mXXapAYZOE"
-                      title="TalentView"
-                      target="_blank"
-                      class="styled"
-                      >application TalentView</a
-                    >
-                    (outil SaaS de gestion de candidatures)
-                  </li>
-                  <li>
-                    Gestion de projet pour le changement de framework front-end
-                    sur plusieurs applications (AngularJS
-                    <i class="fas fa-xs fa-arrow-right"></i> Vue.js)
-                  </li>
-                  <li>
-                    Fonctionnement en méthode agile. Collaboration avec d'autres
-                    équipes (back-end, produit) et partenaires externes
-                  </li>
-                  <li>
-                    Développement d'une librairie de composants Vue.js
-                    (bibliothèque d'UI)
-                  </li>
-                  <li>Création d'une <a
-                    href="https://chrome.google.com/webstore/detail/talentview-ats-chrome-ext/affbbkhjhcgoeidkmpigjahhdoeghepf"
-                    title="TalentView ATS Chrome extension"
+            <resume-item title="Senior developer front-end" dates="2024 - présent">
+              <span slot="location"><a
+                href="https://www.exotec.com"
+                title="Exotec"
+                target="_blank"
+                >[Exotec]</a></span>
+              <ul slot="description">
+                <resume-achievement-item>
+                  Conception, développement et maintenance d'applications web
+                  intégrées dans les systèmes robotiques de gestion
+                  d'entrepôts de stockage
+                </resume-achievement-item>
+                <resume-achievement-item>
+                  Fonctionnement en méthode agile. Collaboration avec d'autres
+                  équipes (back-end, produit, UX/UI)
+                </resume-achievement-item>
+              </ul>
+            </resume-item>
+            <resume-item title="Lead developer front-end" dates="2020 - 2023">
+              <span slot="location"><a
+                href="https://www.talentview.fr"
+                title="TalentView"
+                target="_blank"
+                >[TalentView]</a></span>
+              <ul slot="description">
+                <resume-achievement-item>
+                  Conception, développement et maintenance de l'<a
+                    href="https://www.youtube.com/watch?v=_mXXapAYZOE"
+                    title="TalentView"
                     target="_blank"
                     class="styled"
-                    >extension Chrome</a
-                  ></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="date">2019 - 2020</div>
-              <div class="info">
-                <div class="resume_item_title">
-                  <h3 class="semi-bold">
-                    Ingénieur études et développement
-                    <span class="location">
-                      <a
-                        href="https://adaming.fr"
-                        title="Adaming"
-                        target="_blank"
-                        >[Adaming]</a
-                      ></span
-                    >
-                  </h3>
-                </div>
-                <ul>
-                  <li>
-                    Développement sur l'application d'encaissement des magasins
-                    Leroy Merlin et Bricoman
-                  </li>
-                  <li>Résolution d'incidents</li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="date">2013 - 2018</div>
-              <div class="info">
-                <div class="resume_item_title">
-                  <h3 class="semi-bold">
-                    Thèse de doctorat et stages ingénieur
-                    <span class="location">
-                      <a
-                        href="https://cadarache.cea.fr"
-                        title="CEA Cadarache"
-                        target="_blank"
-                        >[CEA]</a
-                      ></span
-                    >
-                  </h3>
-                </div>
-                <ul>
-                  <li>
-                    Développement d'une application de modélisation physique du
-                    comportement des plasmas dans les machines de fusion
-                    (tokamaks)
-                  </li>
-                  <li>
-                    Analyse de données et traitement d'images issues de tokamaks
-                  </li>
-                </ul>
-              </div>
-            </li>
+                    >application TalentView</a
+                  >
+                  (outil SaaS de gestion de candidatures)
+                </resume-achievement-item>
+                <resume-achievement-item>
+                  Gestion de projet pour le changement de framework front-end
+                  sur plusieurs applications (AngularJS
+                  <i class="fas fa-xs fa-arrow-right"></i> Vue.js)
+                </resume-achievement-item>
+                <resume-achievement-item>
+                  Fonctionnement en méthode agile. Collaboration avec d'autres
+                  équipes (back-end, produit) et partenaires externes
+                </resume-achievement-item>
+                <resume-achievement-item>
+                  Développement d'une librairie de composants Vue.js
+                  (bibliothèque d'UI)
+                </resume-achievement-item>
+                <resume-achievement-item>Création d'une <a
+                  href="https://chrome.google.com/webstore/detail/talentview-ats-chrome-ext/affbbkhjhcgoeidkmpigjahhdoeghepf"
+                  title="TalentView ATS Chrome extension"
+                  target="_blank"
+                  class="styled"
+                  >extension Chrome</a
+                ></resume-achievement-item>
+              </ul>
+            </resume-item>
+            <resume-item title="Ingénieur études et développement" dates="2019 - 2020">
+              <span slot="location"><a
+                href="https://adaming.fr"
+                title="Adaming"
+                target="_blank"
+                >[Adaming]</a></span>
+              <ul slot="description">
+                <resume-achievement-item>
+                  Développement sur l'application d'encaissement des magasins
+                  Leroy Merlin et Bricoman
+                </resume-achievement-item>
+                <resume-achievement-item>
+                  Résolution d'incidents
+                </resume-achievement-item>
+              </ul>
+            </resume-item>
+            <resume-item title="Thèse de doctorat et stages ingénieur" dates="2013 - 2018">
+              <span slot="location"><a
+                href="https://cadarache.cea.fr"
+                title="CEA Cadarache"
+                target="_blank"
+                >[CEA]</a></span>
+              <ul slot="description">
+                <resume-achievement-item>
+                  Développement d'une application de modélisation physique du
+                  comportement des plasmas dans les machines de fusion
+                  (tokamaks)
+                </resume-achievement-item>
+                <resume-achievement-item>
+                  Analyse de données et traitement d'images issues de tokamaks
+                </resume-achievement-item>
+              </ul>
+            </resume-item>
           </ul>
         </div>
         <div class="resume_item resume_education">
@@ -386,131 +248,65 @@
             <h2 class="bold">Formation</h2>
           </div>
           <ul>
-            <li>
-              <div class="date">2019 - 2020</div>
-              <div class="info">
-                <div class="resume_item_title">
-                  <h3 class="semi-bold">
-                    Formation JS/Java/Big data
-                    <span class="location">
-                      <a
-                        href="https://www.intiformation.com"
-                        title="INTI Formation"
-                        target="_blank"
-                        >[INTI Formation]</a
-                      ></span
-                    >
-                  </h3>
-                </div>
-                <p>
-                  Formation sur les technologies modernes du développement web
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="date">2011 - 2015</div>
-              <div class="info">
-                <div class="resume_item_title">
-                  <h3 class="semi-bold">
-                    Diplôme d'ingénieur
-                    <span class="location">
-                      <a
-                        href="https://www.ec-lyon.fr"
-                        title="Centrale Lyon"
-                        target="_blank"
-                        >[Centrale Lyon]</a
-                      ></span
-                    >
-                  </h3>
-                </div>
-                <p>Ingénieur généraliste</p>
-              </div>
-            </li>
-            <!-- <li>
-              <div class="date">2014 - 2015</div>
-              <div class="info">
-                <div class="resume_item_title">
-                <h3 class="semi-bold">
-                  Master 2 de physique
-                  <span class="location">
-                    <a
-                      href="https://www.univ-lyon1.fr"
-                      title="Université Claude Bernard Lyon 1"
-                      target="_blank"
-                      >[Lyon 1]</a
-                    ></span
-                  >
-                </h3>
-              </div>
-                <p>
-                  Synthèse, caractérisation et vieillissement des matériaux du
-                  nucléaire
-                </p>
-              </div>
-            </li> -->
-            <li>
-              <div class="date">2006 - 2011</div>
-              <div class="info">
-                <div class="resume_item_title">
-                  <h3 class="semi-bold">
-                    BAC S - CPGE
-                    <span class="location">
-                      <a
-                        href="https://www.faidherbe.org"
-                        title="Lycée Faidherbe"
-                        target="_blank"
-                        >[Lycée Faidherbe]</a
-                      ></span
-                    >
-                  </h3>
-                </div>
-                <p>Mention TB - Classe étoilée</p>
-              </div>
-            </li>
-            <!-- <li>
-              <div class="date">2009 - 2011</div>
-              <div class="info">
-                <div class="resume_item_title">
-                <h3 class="semi-bold">
-                  Classes préparatoires aux grandes écoles
-                  <span class="location">
-                    <a
-                      href="https://www.faidherbe.org"
-                      title="Lycée Faidherbe"
-                      target="_blank"
-                      >[Lycée Faidherbe]</a
-                    ></span
-                  >
-                </h3>
-              </div>
-                <p>
-                  Mathématiques, physique et sciences de l'ingénieur - Classe
-                  étoilée
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="date">2006 - 2009</div>
-              <div class="info">
-                <div class="resume_item_title">
-                <h3 class="semi-bold">
-                  Baccalauréat scientifique
-                  <span class="location">
-                    <a
-                      href="https://www.lycee-saint-cricq.org"
-                      title="Lycée Saint-Cricq"
-                      target="_blank"
-                      >[Lycée St Cricq]</a
-                    ></span
-                  >
-                </h3>
-              </div>
-                <p>
-                  Option sciences de l'ingénieur - Spécialité mathématiques -
-                  Mention TB
-                </p>
-              </div>
-            </li> -->
+            <resume-item title="Formation JS/Java/Big data" dates="2019 - 2020">
+              <span slot="location"><a
+                href="https://www.intiformation.com"
+                title="INTI Formation"
+                target="_blank"
+                >[INTI Formation]</a></span>
+              <p slot="description">
+                Formation sur les technologies modernes du développement web
+              </p>
+            </resume-item>
+            <resume-item title="Diplôme d'ingénieur" dates="2011 - 2015">
+              <span slot="location"><a
+                href="https://www.ec-lyon.fr"
+                title="Centrale Lyon"
+                target="_blank"
+                >[Centrale Lyon]</a></span>
+              <p slot="description">Ingénieur généraliste</p>
+            </resume-item>
+            <!-- <resume-item title="Master 2 de physique" dates="2014 - 2015">
+              <span slot="location"><a
+                href="https://www.univ-lyon1.fr"
+                title="Université Claude Bernard Lyon 1"
+                target="_blank"
+                >[Lyon 1]</a></span>
+              <p slot="description">
+                Synthèse, caractérisation et vieillissement des matériaux du
+                nucléaire
+              </p>
+            </resume-item> -->
+            <resume-item title="BAC S - CPGE" dates="2006 - 2011">
+              <span slot="location"><a
+                href="https://www.faidherbe.org"
+                title="Lycée Faidherbe"
+                target="_blank"
+                >[Lycée Faidherbe]</a></span>
+              <p slot="description">Mention TB - Classe étoilée</p>
+            </resume-item>
+            <!-- <resume-item title="Classes préparatoires aux grandes écoles" dates="2009 - 2011">
+              <span slot="location"><a
+                href="https://www.faidherbe.org"
+                title="Lycée Faidherbe"
+                target="_blank"
+                >[Lycée Faidherbe]</a></span>
+              <p slot="description">
+                Mathématiques, physique et sciences de l'ingénieur - Classe
+                étoilée
+              </p>
+            </resume-item>
+            <resume-item title="Baccalauréat scientifique" dates="2006 - 2009">
+              <span slot="location"> <a
+                href="https://www.lycee-saint-cricq.org"
+                title="Lycée Saint-Cricq"
+                target="_blank"
+                >[Lycée St Cricq]</a></span>
+              <p slot="description">
+                Option sciences de l'ingénieur - Spécialité mathématiques -
+                Mention TB
+              </p>
+            </resume-item> -->
           </ul>
         </div>
         <div class="resume_item resume_hobby">
