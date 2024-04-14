@@ -9,13 +9,16 @@ const resumeItemStyle = `
     position: relative;
   }
 
+  .item--not-last {
+    padding-bottom: 20px
+  }
+
   .resume_item_title {
     display: flex;
     gap: 10px;
   }
 
   .info {
-    margin-bottom: 20px;
     line-height: 19px;
   }
 
@@ -56,7 +59,7 @@ const resumeItemStyle = `
     top: 14px;
     left: -16px;
     width: 2px;
-    height: calc(100% + 12px);
+    height: calc(100% - 8px);
     background: var(--slate-600);
   }
 `
@@ -81,6 +84,11 @@ class ResumeItem extends HTMLElement {
     super()
     const shadow = this.attachShadow({ mode: 'open' })
     shadow.append(resumeItemTemplate.content.cloneNode(true))
+    const isLast = this.getAttribute('last')
+    if (isLast === null) {
+      this.shadowRoot.querySelector('li').classList.add('item--not-last')
+    }
+    this.isLast = isLast !== null && isLast !== 'false'
     this.title = this.getAttribute('title')
     this.dates = this.getAttribute('dates')
     this.titleElement = shadow.querySelector('[data-title]')
