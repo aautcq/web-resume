@@ -35,6 +35,8 @@ const exec = require('@actions/exec');
   const html = fs.readFileSync('index.html', 'utf-8');
   await page.setContent(html, { waitUntil: 'networkidle0' });
   await page.addStyleTag({ path: 'style.css' });
+
+  // add custom elements
   await page.addScriptTag({ path: 'components/infoItem.js' });
   await page.addScriptTag({ path: 'components/resumeItem.js' });
   await page.addScriptTag({ path: 'components/resumeAchievementItem.js' });

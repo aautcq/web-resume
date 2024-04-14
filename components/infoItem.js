@@ -1,32 +1,35 @@
 const infoItemTemplate = document.createElement('template')
 
+const infoItemStyle = `
+  .item {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+    background: var(--slate-100);
+    color: var(--slate-800);
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+    position: relative;
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data {
+    color: var(--slate-100);
+  }
+`
+
 infoItemTemplate.innerHTML = `
-  <style>
-    .item {
-      display: flex;
-      margin-bottom: 10px;
-      align-items: center;
-    }
+  <style>${infoItemStyle}</style>
 
-    .icon {
-      width: 28px;
-      height: 28px;
-      background: var(--slate-100);
-      color: var(--slate-800);
-      border-radius: 50%;
-      margin-right: 10px;
-      font-size: 16px;
-      position: relative;
-      flex: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .data {
-      color: var(--slate-100);
-    }
-  </style>
   <li class="item">
     <div class="icon">
       <slot name="icon"></slot>

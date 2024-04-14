@@ -1,23 +1,26 @@
 const resumeAchievementItemTemplate = document.createElement('template')
 
-resumeAchievementItemTemplate.innerHTML = `
-  <style>
-    li {
-      position: relative;
-      margin-bottom: 3px;
-    }
+const resumeAchievementItemStyle = `
+  li {
+    position: relative;
+    margin-bottom: 3px;
+  }
 
-    li:before {
-      content: '';
-      position: absolute;
-      top: 8px;
-      left: -12px;
-      width: 2px;
-      height: 2px;
-      border-radius: 50%;
-      border: 1px solid var(--slate-500);
-    }
-  </style>
+  li:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -12px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    border: 1px solid var(--slate-500);
+  }
+`
+
+resumeAchievementItemTemplate.innerHTML = `
+  <style>${resumeAchievementItemStyle}</style>
+
   <li>
     <slot></slot>
   </li>

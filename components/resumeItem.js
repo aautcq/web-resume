@@ -1,70 +1,69 @@
 const resumeItemTemplate = document.createElement('template')
 
+const resumeItemStyle = `
+  h3 {
+    margin: 0;
+  }
+
+  li {
+    position: relative;
+  }
+
+  .resume_item_title {
+    display: flex;
+    gap: 10px;
+  }
+
+  .info {
+    margin-bottom: 20px;
+    line-height: 19px;
+  }
+
+  .semi-bold {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--slate-700);
+  }
+
+  .date {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  .location {
+    font-weight: 300;
+    margin-left: 5px;
+    font-size: 14px;
+    color: var(--slate-500);
+  }
+
+  li:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid var(--slate-600);
+  }
+
+  li:after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -16px;
+    width: 2px;
+    height: calc(100% + 12px);
+    background: var(--slate-600);
+  }
+`
+
 resumeItemTemplate.innerHTML = `
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      list-style: none;
-      font-family: 'Montserrat', sans-serif;
-    }
+  <style>${resumeItemStyle}</style>
 
-    li {
-      position: relative;
-    }
-
-    .resume_item_title {
-      display: flex;
-      gap: 10px;
-    }
-
-    .info {
-      margin-bottom: 20px;
-      line-height: 19px;
-    }
-
-    .semi-bold {
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 5px;
-      color: var(--slate-700);
-    }
-
-    .date {
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 7px;
-    }
-
-    .location {
-      font-weight: 300;
-      margin-left: 5px;
-      font-size: 14px;
-      color: var(--slate-500);
-    }
-
-    li:before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: -20px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      border: 2px solid var(--slate-600);
-    }
-
-    li:after {
-      content: '';
-      position: absolute;
-      top: 14px;
-      left: -16px;
-      width: 2px;
-      height: calc(100% + 12px);
-      background: var(--slate-600);
-    }
-  </style>
   <li>
     <div data-dates class="date"></div>
     <div class="info">
