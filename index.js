@@ -36,6 +36,12 @@ const exec = require('@actions/exec');
   await page.setContent(html, { waitUntil: 'networkidle0' });
   await page.addStyleTag({ path: 'style.css' });
 
+  // add custom elements
+  await page.addScriptTag({ path: 'components/infoItem.js' });
+  await page.addScriptTag({ path: 'components/resumeItem.js' });
+  await page.addScriptTag({ path: 'components/resumeAchievementItem.js' });
+  await page.addScriptTag({ path: 'components/skillProgress.js' });
+
   // to reflect CSS used for screens instead of print
   await page.emulateMediaType('screen');
 
