@@ -8,8 +8,6 @@ It is sharable as is, and responsive. Which is wow.
 
 ## Build to PDF
 
-The PDF is generated using Headless Chrome through [Puppeteer](https://github.com/puppeteer/puppeteer/tree/main), then shrunk using Alfred Klomp's [shrinkpdf](https://github.com/aklomp/shrinkpdf) script.
-
 First, install the dependencies, with NPM or whatever your prefered package manager is:
 
 ```bash
