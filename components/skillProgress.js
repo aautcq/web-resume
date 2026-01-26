@@ -10,11 +10,12 @@ const skillProgressStyle = `
   }
 
   .skill_name {
-    width: 40%;
+    width: 50%;
+    font-size: 11px;
   }
 
   .skill_progress {
-    width: 35%;
+    width: 25%;
     margin: 0 5px;
     height: 5px;
     background: var(--slate-500);

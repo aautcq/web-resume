@@ -10,7 +10,7 @@ const resumeItemStyle = `
   }
 
   .item--not-last {
-    padding-bottom: 20px
+    padding-bottom: 10px
   }
 
   .resume_item_title {
@@ -32,7 +32,7 @@ const resumeItemStyle = `
   .date {
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
   }
 
   .location {
