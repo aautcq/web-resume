@@ -68,7 +68,7 @@ resumeItemTemplate.innerHTML = `
   <style>${resumeItemStyle}</style>
 
   <li>
-    <div data-dates class="date"></div>
+    <time data-dates class="date"></time>
     <div class="info">
       <div class="resume_item_title">
         <h3 class="semi-bold" data-title></h3>

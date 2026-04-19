@@ -38,19 +38,19 @@
           />
         </div>
         <div class="resume_content">
-          <div class="resume_item resume_info">
+          <section class="resume_item resume_info">
             <div class="title">
-              <h1 class="bold">Adrien Autricque</h1>
+              <h1 translate="no" class="bold">Adrien Autricque</h1>
               <h4 class="regular">Développeur front-end</h4>
               <!-- <h5 class="regular--sm">Disponible sous 3 mois</h5> -->
             </div>
             <ul>
               <info-item>
-                <i slot="icon" class="fas fa-birthday-cake"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-birthday-cake"></i>
                 34 ans
               </info-item>
               <info-item>
-                <i slot="icon" class="fas fa-map-signs"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-map-signs"></i>
                 <a
                   href="https://www.google.com/maps/place/173+Rue+des+Stations,+59000+Lille"
                   title="Adresse : 173 rue des Stations, 59 000, Lille"
@@ -59,7 +59,7 @@
                 >
               </info-item>
               <info-item>
-                <i slot="icon" class="fas fa-mobile-alt"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-mobile-alt"></i>
                 <a
                   href="tel:+33627047868"
                   title="Numéro de téléphone : 06 27 04 78 68"
@@ -68,7 +68,7 @@
                 >
               </info-item>
               <info-item>
-                <i slot="icon" class="fas fa-envelope"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-envelope"></i>
                 <a
                   href="mailto:adrien.autricque@gmail.com"
                   title="Adresse e-mail : adrien.autricque@gmail.com"
@@ -77,7 +77,7 @@
                 >
               </info-item>
               <info-item>
-                <i slot="icon" class="fab fa-linkedin"></i>
+                <i slot="icon" aria-hidden="true" class="fab fa-linkedin"></i>
                 <a
                   href="https://www.linkedin.com/in/adrienautricque"
                   title="Profil LinkedIn d'Adrien Autricque"
@@ -86,7 +86,7 @@
                 >
               </info-item>
               <info-item>
-                <i slot="icon" class="fab fa-github"></i>
+                <i slot="icon" aria-hidden="true" class="fab fa-github"></i>
                 <a
                   href="https://github.com/aautcq"
                   title="Profil GitHub d'Adrien Autricque"
@@ -95,7 +95,7 @@
                 >
               </info-item>
               <info-item>
-                <i slot="icon" class="fas fa-link"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-link"></i>
                 <a
                   href="https://me.aautcq.dev"
                   title="Site personnel d'Adrien Autricque"
@@ -104,12 +104,12 @@
                 >
               </info-item>
             </ul>
-          </div>
-          <div class="resume_item">
+          </section>
+          <section class="resume_item">
             <div class="title">
               <h2 class="bold">Compétences</h2>
             </div>
-            <ul>
+            <ul translate="no">
               <skill-progress value="100">VueJS, Nuxt</skill-progress>
               <skill-progress value="100">HTML5, CSS3</skill-progress>
               <skill-progress value="90">JS, TS</skill-progress>
@@ -122,8 +122,8 @@
               <skill-progress value="90">Notion</skill-progress>
               <skill-progress value="70">Figma</skill-progress>
             </ul>
-          </div>
-          <div class="resume_item">
+          </section>
+          <section class="resume_item">
             <div class="title">
               <h2 class="bold">Langues étrangères</h2>
             </div>
@@ -131,11 +131,11 @@
               <skill-progress value="100">Anglais</skill-progress>
               <skill-progress value="50">Espagnol</skill-progress>
             </ul>
-          </div>
+          </section>
         </div>
       </div>
       <div class="resume_right">
-        <div class="resume_item resume_about">
+        <section class="resume_item resume_about">
           <div class="title">
             <h2 class="bold">À propos</h2>
           </div>
@@ -147,8 +147,8 @@
             J'aime apprendre de nouvelles technologies, relever des défis et
             transmettre mes connaissances aux autres.
           </p>
-        </div>
-        <div class="resume_item resume_work">
+        </section>
+        <section class="resume_item resume_work">
           <div class="title">
             <h2 class="bold">Expériences professionnelles</h2>
           </div>
@@ -211,8 +211,8 @@
             </resume-item>
             <resume-item title="Ingénieur études et développement" dates="2019 - 2020">
               <span slot="location"><a
-                href="https://adaming.fr"
-                title="Site officiel d'Adaming"
+                href="https://fr.linkedin.com/company/groupe-adaming"
+                title="Page LinkedIn d'Adaming"
                 target="_blank"
                 >[Adaming]</a></span>
               <ul slot="description">
@@ -243,16 +243,16 @@
               </ul>
             </resume-item>
           </ul>
-        </div>
-        <div class="resume_item resume_education">
+        </section>
+        <section class="resume_item resume_education">
           <div class="title">
             <h2 class="bold">Formation</h2>
           </div>
           <ul>
             <resume-item title="Formation JS/Java/Big data" dates="2019 - 2020">
               <span slot="location"><a
-                href="https://www.intiformation.com"
-                title="Site officiel de INTI Formation"
+                href="https://www.linkedin.com/company/inti-formation/?originalSubdomain=fr"
+                title="Page LinkedIn de INTI Formation"
                 target="_blank"
                 >[INTI Formation]</a></span>
               <p slot="description">
@@ -309,8 +309,8 @@
               </p>
             </resume-item> -->
           </ul>
-        </div>
-        <div class="resume_item resume_hobby">
+        </section>
+        <section class="resume_item resume_hobby">
           <div class="title">
             <h2 class="bold">Hobbies</h2>
           </div>
@@ -322,8 +322,22 @@
             <li title="Sport"><i class="fas fa-dumbbell"></i></li>
             <li title="Nature"><i class="fab fa-pagelines"></i></li>
           </ul>
-        </div>
+        </section>
       </div>
     </div>
+
+    <a
+      href="cv-adrien-autricque.pdf"
+      download
+      target="_blank"
+      rel="noopener"
+      type="application/pdf"
+      class="download-link"
+      title="Télécharger la version PDF de mon CV"
+      data-pdf-exclude="true"
+    >
+      <i class="fas fa-file-pdf"></i>
+      Télécharger
+    </a>
   </body>
 </html>

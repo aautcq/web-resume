@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/aautcq/web-resume#readme",
   "devDependencies": {
-    "pdfize": "^0.1.3",
+    "pdfize": "^0.3.0",
     "rimraf": "^6.0.1"
   }
 }
